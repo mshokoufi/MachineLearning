@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Olympus - Great Learning</title>
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://dq0un14k3iie7.cloudfront.net/assets/gl-favicon-v1-2-f955f24bac9c3d7d25b53000f0e13bee0568b3df01356310b62b6ac86fa1a926.svg" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link data-turbolinks-track="true" href="https://dq0un14k3iie7.cloudfront.net/assets/application-1ef6d5ed398fcfbaa0be52b4c87c9f6c964b6bbbd4d81f4cfa88cb91d17307e4.css" media="all" rel="stylesheet" />
+      <link data-turbolinks-track="true" href="https://dq0un14k3iie7.cloudfront.net/assets/payment_transactions-ebe237852b1b6537a444fa35d86f091168b4c704cd778190c054b17646e4e0a3.css" media="all" rel="stylesheet" />
+
+
+  <script data-turbolinks-track="true" src="https://dq0un14k3iie7.cloudfront.net/assets/application-e10e62abf14fd733e6005f2e523308acd9db5f7a5493f6d6edc158dc295025fe.js"></script>
+
+      <script data-turbolinks-track="true" src="https://dq0un14k3iie7.cloudfront.net/assets/payment_transactions-d5e84112a5612a72670424e0442cb2b4eb7b0c32016a196e3e9ce4aa9baed132.js"></script>
+
+
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="+LJKMKDS3qsS/L261xK2sUMOzbPSX0HHPm4ivkVAftQ=" name="csrf-token" />
+  
+  
+    <!-- start Rollbar -->
+    <script>
+        console.log('Rollbar!!!');
+
+        var _rollbarConfig = {
+            accessToken: "9f626ee0243e4a128e0ea52bedcffd57",
+            captureUncaught: true,
+            captureUnhandledRejections: true,
+            payload: {
+                environment: "production"
+            }
+        };
+    // Rollbar Snippet
+    !function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){"use strict";var n=o(1),t=o(5);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.23.0/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";var n=o(2),t=o(3);function a(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var l=0;function i(r,e){this.options=r,this._rollbarOldOnError=null;var o=l++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var s=o(4),d=function(r,e){return new i(r,e)},c=function(r){return new s(d,r)};function u(r){return a((function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)}))}i.prototype.loadFull=function(r,e,o,n,t){var l=!1,i=e.createElement("script"),s=e.getElementsByTagName("script")[0],d=s.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=a((function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{d.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,a,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(a=n.args||[],i=0;i<a.length;++i)if("function"==typeof(l=a[i])){l(e);break}}"function"==typeof t&&t(e)}()}})),d.insertBefore(i,s)},i.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<p.length;++f)i.prototype[p[f]]=u(p[f]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var l=new c(e);return a((function(){e.captureUncaught&&(l._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,l,!0),e.wrapGlobalEventHandlers&&t(r,l,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,l,!0);var a=e.autoInstrument;return!1!==e.enabled&&(void 0===a||!0===a||"object"==typeof a&&a.network)&&r.addEventListener&&(r.addEventListener("load",l.captureLoad.bind(l)),r.addEventListener("DOMContentLoaded",l.captureDomContentLoaded.bind(l))),r[o]=l,l}))()}},Rollbar:c}},function(r,e,o){"use strict";function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null);var t=e.handleUncaughtException.apply(e,n);o&&o.apply(r,n),"anonymous"===t&&(e.anonymousErrorsPending+=1)}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var t;if("function"==typeof e._rollbarOldOnError)t=e._rollbarOldOnError;else if(r.onerror){for(t=r.onerror;t._rollbarOldOnError;)t=t._rollbarOldOnError;e._rollbarOldOnError=t}e.handleAnonymousErrors();var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};o&&(a._rollbarOldOnError=t),r.onerror=a}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}}},function(r,e,o){"use strict";function n(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports=function(r,e,o){if(r){var t,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(t=0;t<l.length;++t)r[a=l[t]]&&r[a].prototype&&n(e,r[a].prototype,o)}}},function(r,e,o){"use strict";function n(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(n.prototype)}n.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=n},function(r,e,o){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+    // End Rollbar Snippet
+
+    // window.onerror("TestError: Hello Ninja Dashboard", window.location.href);
+
+    </script>
+    <!-- end Rollbar -->
+
+  <!-- start Mixpanel -->
+<script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+
+mixpanel.init('be636828dad51bd56fbfb1e20bbddc37');</script>
+<!-- end Mixpanel -->
+
+
+</head>
+<body>
+
+
+<div class="container-fluid">
+
+  <input type='hidden' id='_lms_analytics_title' value='PaymentTransactions/new'>
+  <input type='hidden' id='_lms_analytics_params_json' value='{&quot;program_group_id&quot;:&quot;9000&quot;,&quot;user_id&quot;:&quot;1995201&quot;,&quot;action&quot;:&quot;new&quot;,&quot;controller&quot;:&quot;payment_transactions&quot;,&quot;custom_program_group_name&quot;:&quot;PGP-AIML-BA-UTA-Aug&#39;21-A&quot;}'>
+  <input type='hidden' id='_lms_user_id' value='1995201'>
+  <input type='hidden' id='_lms_user_email' value=''>
+  <input type='hidden' id='_lms_user_name' value=''>
+
+
+    
+
+  <input type="hidden" id="collecting_payment" value="true">
+
+          <link defer="defer" href="https://dq0un14k3iie7.cloudfront.net/assets/new_lti_header-f64fb55ced8f812119382bb36f7d0b2afb14ab992015308d6e667fed56573cd6.css" media="all" rel="stylesheet" />
+<input id="pb_id" name="pb_id" type="hidden" value="9000">
+<nav class="navbar navbar-default navbar-fixed-top new-header ">
+  <div class="container-fluid">
+
+    <!-- GL Logo -->
+    <div class="navbar-header mb-0">
+        <a class="navbar-brand hidden-xs" href="https://olympus.greatlearning.in/learner_dashboard?pb_id=9000">
+          <img src="https://d9jmtjs5r4cgq.cloudfront.net/images/branding/greatlearning-brand-v1-2.svg" alt='Greatlearning'>
+        </a>
+      <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#">
+        <img src="https://d9jmtjs5r4cgq.cloudfront.net/images/branding/greatlearning-brand-v1-2.svg" alt='Greatlearning'>
+      </a>
+    </div>
+
+    <!-- COLLAPSIBLE NAVBAR -->
+    <div class="collapse navbar-collapse" id="alignment-example">
+        <ul class="nav navbar-nav" data-pg="[{:program_group_id=&gt;9000, :program_group_name=&gt;&quot;PGP-AIML-BA-UTA-Aug&#39;21-A&quot;, :program_id=&gt;679, :program_name=&gt;&quot;Post Graduate Program in Artificial Intelligence and Machine Learning: Business Applications&quot;, :program_code=&gt;&quot;PGP-AIML-BA-UTA-INTL&quot;, :program_display_code=&gt;&quot;PGP-AIML&quot;, :selected=&gt;true, :access_type=&gt;&quot;basic&quot;, :digital_campus_program=&gt;false, :disable_file_downloads=&gt;false, :overlay_logo=&gt;nil, :intro_video=&gt;nil, :outro_video=&gt;nil, :program_type=&gt;&quot;default&quot;, :degree_program_code=&gt;nil, :degree_program_display_code=&gt;nil, :semester_number=&gt;nil}]">
+
+
+              <!-- TODO: check to be removed after demo -->
+                <li>
+                  <a href="https://olympus.greatlearning.in/learner_dashboard?pb_id=9000">Dashboard</a>
+                </li>
+                <li>
+                  <a href="https://olympus.greatlearning.in/courses?pb_id=9000">Courses</a>
+                </li>
+                <li class="" id="excelerate-tab">
+                  <a href="https://olympus1.greatlearning.in/excelerate/career_prep?pb_id=9000">Excelerate</a>
+                </li>
+
+        </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+            <li class="hidden-xs hidden-sm">
+              <a href="https://olympus1.greatlearning.in/program_support?pb_id=9000"><img src="https://dq0un14k3iie7.cloudfront.net/assets/icons/help-c63cc8358cae138100972538cbddb234dffdb1c8a207d739f74a832789036cf9.svg" alt='Support'></a>
+            </li>
+          <!-- TODO: check to be removed after demo -->
+            <li class="hidden-xs hidden-sm">
+              <a href="https://olympus.greatlearning.in/announcements?pb_id=9000" class="announcements-icon">
+                <div class="announcements">
+                  <img src="https://dq0un14k3iie7.cloudfront.net/assets/icons/announcement-bcf08cef13e978c3aee7fe02a00d3ee1971c245bdd5779c8c58abfd72e4be011.svg" alt='Announcements'>
+                  <span class="unread-count hidden"></span>
+                </div>
+              </a>
+            </li>
+          <li class="dropdown user-avatar">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="nav-avatar">
+              <img src="https://d9jmtjs5r4cgq.cloudfront.net/linkedin-uploads/images/1995201" alt='Avatar'>
+            </span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="about-us">
+              <div class="user-info">
+                <div class="profile-img">
+                  <img src="https://d9jmtjs5r4cgq.cloudfront.net/linkedin-uploads/images/1995201" alt='Avatar'>
+                </div>
+                <div class="user-details">
+                  <h5>Maryam Shokoufi</h5>
+                  <h6>shokoufi@gmail.com</h6>
+                </div>
+              </div>
+
+
+                <li><a href="https://olympus1.greatlearning.in/eportfolio/private/ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjMlZ5WDJsa0lqb3hPVGsxTWpBeGZRLkk4dFBYV2tzRUtuRjdfSEVPbHJ5cHRqcDFjclg0akU2LVRkeDNveVcwMUE=?pb_id=9000">My ePortfolio</a></li>
+
+                <li><a href="https://olympus.greatlearning.in/fee_payment?pb_id=9000">Fee payment</a></li>
+
+
+
+                <li><a href="https://olympus1.greatlearning.in/feed/private/ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjFjMlZ5WDJsa0lqb3hPVGsxTWpBeGZRLkk4dFBYV2tzRUtuRjdfSEVPbHJ5cHRqcDFjclg0akU2LVRkeDNveVcwMUE=?pb_id=9000">#mygreatlearning</a></li>
+
+                <li><a href="https://olympus1.greatlearning.in/referrals/new?s=lms&amp;u=1995201&amp;pb_id=9000">Refer and Earn</a></li>
+
+
+              <li>
+                <a href="https://olympus.greatlearning.in/profile/settings?pb_id=9000">Settings</a>
+              </li>
+
+              <li><a href="/user_auth/logout_user_from_website">Logout</a></li>
+            </ul>
+          </li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+
+
+  <div class="text-center header-title">
+    <h3 class="mb-20 hidden-xs">Payments</h3>
+  </div>
+
+<script defer="defer" media="all" src="https://dq0un14k3iie7.cloudfront.net/assets/new_lti_header-1efefa27f0bb8a2eec09299b0d36937e8b507248d3269d28435c01c203dc9d51.js"></script>
+
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <input id="dashboard_url" type="hidden" value="">
+      <div class="modal-body" style="padding: 0;">
+        <h3 style="margin-top: 0;">Attention</h3>
+        <p class="confirmation-text" id="confirmationText"></p>
+      </div>
+      <div class="row">
+        <button type="button" class="btn pull-right" style="color: #196ae5;font-size: 12px;background-color: transparent;" onclick="ltiApp.confirmProgramSwitch(this)">Switch Program</button>
+        <button type="button" class="btn pull-right" style="color: #000000;font-size: 12px; background-color: transparent;" onclick="ltiApp.closeConfirmModal(this)">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <div id="post-due-date-msg" class="hidden nav-space jumbotron payment-msg-container">
+  </div>
+
+  <div id="till-due-date-msg" class="hidden nav-space jumbotron payment-msg-container">
+      <h3 class="payment-msg-header">Upcoming fees to pay</h3>
+      <p class="font-size-18px">Hey Maryam Shokoufi, we notice that you have a Payment of
+        <span class="payment-due-amount">USD 1000.0
+        </span> for 3rd Installment is due on
+        <span class="payment-due-date">16 October 2021</span>.
+      </p>
+      <p class="font-size-18px">You can click on the button below to pay the same and get uninterrupted access to the Olympus.</p>
+      <p class="text-center margin-top-30px">
+        <a href="#" class="btn btn-primary btn-lg" onclick="ltiApp.payNow(false);">Pay Now</a>
+        <a href="https://olympus.greatlearning.in/learner_dashboard" class="pay-later-link">Later</a>
+      </p>
+  </div>
+
+
+  <section class="page-container nav-space fee-margin-bottom">
+    <div class="container">
+      <div id="internal-error-msg" class="hidden">
+        <p>Seems like the link is not valid or there is some internal issue.</p>
+        <p>
+          Kindly contact us at
+          <span class="gl-phone">
+            +1 512 647 2647
+        </span>
+          or
+          <span class="gl-email">
+            Office.AIML.UTAustin@mygreatlearning.com
+        </span>
+          to resolve this.
+        </p>
+      </div>
+
+      <div id="email-verification-msg" class="hidden">
+        <h3>Confirm Email Id</h3>
+        <p>To continue to payment, please confirm if your email id is <span class="user-email">shokoufi@gmail.com</span></p>
+        <p class="text-right mt-20">
+          <a href="#" class="btn btn-primary " onclick="ltiApp.emailConfirmed();">Yes, this is me</a>
+          <a href="#" class="incorrect-email-link btn btn-link" onclick="ltiApp.emailIncorrect();" >Not me!</a>
+        </p>
+      </div>
+
+      <div id="incorrect-email-msg" class="hidden payment-msg-container">
+        <h3>Wrong payment link</h3>
+        <p>Seems like you have got a wrong link to payment.</p>
+        <p>
+          Kindly contact us at
+          <span class="gl-phone">
+            +1 512 647 2647
+        </span>
+          or
+          <span class="gl-email">
+            Office.AIML.UTAustin@mygreatlearning.com
+        </span>
+          to get the right link.
+        </p>
+      </div>
+
+      <div id="till-due-date-msg" class="hidden payment-msg-container">
+        <h3>Upcoming fee payment</h3>
+        <p>
+          Payment of
+          <span class="payment-due-amount">USD
+            1000.0
+          </span>
+          for 3rd Installment
+          is due on <span class="payment-due-date">16 October 2021</span>.
+          Please make the payment for uninterrupted learning experience.
+        </p>
+        <p>In case of any queries, kindly reach out to us at
+  <span class="gl-phone-color">
+    +1 512 647 2647
+  </span> or
+  <a href="mailto:admissions_support@greatlearning.in" target="_blank">
+    Office.AIML.UTAustin@mygreatlearning.com
+  </a>
+</p>
+        <p class="text-center margin-top-30px">
+          <a href="#" class="btn btn-primary btn-lg" onclick="ltiApp.payNow(false);">Pay Now</a>
+          <a href="https://olympus.greatlearning.in/learner_dashboard" class="btn btn-link">Later</a>
+        </p>
+      </div>
+
+      <div id="post-due-date-msg" class="hidden payment-msg-container">
+        <h3>Access blocked</h3>
+        <p>
+          Payment of <span class="payment-due-amount">USD 1000.0</span>
+          for 3rd Installment was due on <span class="payment-due-date">16 October 2021</span>.
+          Please make the payment to resume learning.
+        </p>
+        <p>In case of any queries, kindly reach out to us at
+  <span class="gl-phone-color">
+    +1 512 647 2647
+  </span> or
+  <a href="mailto:admissions_support@greatlearning.in" target="_blank">
+    Office.AIML.UTAustin@mygreatlearning.com
+  </a>
+</p>
+        <p class="text-center margin-top-30px">
+          <a href="#" class="btn btn-primary" onclick="ltiApp.payNow(true);">Pay Now</a>
+        </p>
+      </div>
+
+      <div id="payment-validation-errors" class="validation-errors hidden"></div>
+
+      <div id="fee-payment-form" class="payment-form-container hidden">
+        <div class="row">
+          <h4 class="text-center">
+            PGP-AIML Fees Payment
+          </h4>
+        </div>
+
+        <form accept-charset="UTF-8" action="/payment_transactions" class="form-horizontal" id="new_payment_transaction" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="+LJKMKDS3qsS/L261xK2sUMOzbPSX0HHPm4ivkVAftQ=" /></div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <h5 class="section-header">Enter Personal Details</h5>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-5 col-md-push-6 mt-sm-0">
+              <input class="form-control" id="payment_transaction_email" name="payment_transaction[email]" placeholder="Enter a valid email address" type="text" value="shokoufi@gmail.com" />
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5 col-md-pull-6 mt-sm-0">
+              <input class="form-control" id="payment_transaction_name" name="payment_transaction[name]" placeholder="Enter your full name" type="text" value="Maryam Shokoufi" />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div id="email-msg-id" class="col-md-5 email-msg hidden">
+              <span>Payment receipt will be sent to the email id provided</span>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <h5 class="section-header">
+                  FEE DETAILS &nbsp;&nbsp;
+                  <span class="section-header-due-amount"> Amount Due: USD 1000.0</span>
+              </h5>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-md-11 one-col-fee">
+              <div class="fee-section">
+                <div class="most-popular-top-box">
+                  <div class="row">
+                    <div class="col-xs-12"> <h3 class="payment-option-text payment-options-header">Pay in Installments</h3></div>
+                  </div>
+                </div>
+                <div class="p-20">
+                  <div id="fees-div" class="installment-div">
+                    <div>Select Installments</div>
+
+                        <div class="row checkbox form-control-static ">
+                          <label class="col-xs-8 installment-items" style="padding-left: 35px;">
+                            <input type="checkbox" id="installment-checkbox-6632" class="installment-checkbox"
+                                   data-has-predefined-amount="true"
+                                   onclick="ltiApp.updateAmount('installment-checkbox-6632');">
+
+                            <div class="installment-name">Admission Fee</div>
+
+                              <span class="installment-due-date">Due 14 Aug&#39;21</span>
+                          </label>
+                          <div class="col-xs-4 installment-amount-row">
+                              <span class="installment-currency">USD</span>
+                              <span class="installment-amount" data-amount="500.0">500</span>
+                          </div>
+                        </div>
+                        <div class="row checkbox form-control-static ">
+                          <label class="col-xs-8 installment-items" style="padding-left: 35px;">
+                            <input type="checkbox" id="installment-checkbox-6633" class="installment-checkbox"
+                                   data-has-predefined-amount="true"
+                                   onclick="ltiApp.updateAmount('installment-checkbox-6633');">
+
+                            <div class="installment-name">1st Installment</div>
+
+                              <span class="installment-due-date">Due 16 Aug&#39;21</span>
+                          </label>
+                          <div class="col-xs-4 installment-amount-row">
+                              <span class="installment-currency">USD</span>
+                              <span class="installment-amount" data-amount="1000.0">1000</span>
+                          </div>
+                        </div>
+                        <div class="row checkbox form-control-static ">
+                          <label class="col-xs-8 installment-items" style="padding-left: 35px;">
+                            <input type="checkbox" id="installment-checkbox-6634" class="installment-checkbox"
+                                   data-has-predefined-amount="true"
+                                   onclick="ltiApp.updateAmount('installment-checkbox-6634');">
+
+                            <div class="installment-name">2nd Installment</div>
+
+                              <span class="installment-due-date">Due 16 Sep&#39;21</span>
+                          </label>
+                          <div class="col-xs-4 installment-amount-row">
+                              <span class="installment-currency">USD</span>
+                              <span class="installment-amount" data-amount="1000.0">1000</span>
+                          </div>
+                        </div>
+                        <div class="row checkbox form-control-static ">
+                          <label class="col-xs-8 installment-items" style="padding-left: 35px;">
+                            <input type="checkbox" id="installment-checkbox-6635" class="installment-checkbox"
+                                   data-has-predefined-amount="true"
+                                   onclick="ltiApp.updateAmount('installment-checkbox-6635');">
+
+                            <div class="installment-name">3rd Installment</div>
+
+                              <span class="installment-due-date">Due 16 Oct&#39;21</span>
+                          </label>
+                          <div class="col-xs-4 installment-amount-row">
+                              <span class="installment-currency">USD</span>
+                              <span class="installment-amount" data-amount="1000.0">1000</span>
+                          </div>
+                        </div>
+                        <div class="row checkbox form-control-static min-height-50px">
+                          <label class="col-xs-8 installment-items" style="padding-left: 35px;">
+                            <input type="checkbox" id="installment-checkbox-6636" class="installment-checkbox"
+                                   data-has-predefined-amount="false"
+                                   onclick="ltiApp.updateAmount('installment-checkbox-6636');">
+
+                            <div class="installment-name">Others</div>
+
+                          </label>
+                          <div class="col-xs-4 installment-amount-row">
+                              <input id="installment-input-6636" class="installment-amount form-control"
+                                     type="text" onkeyup="ltiApp.updateAmount();"
+                                     onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46">
+                          </div>
+                        </div>
+                  </div>
+
+                  <hr class="installment-separator row">
+
+                  <div class="row">
+                    <label class="col-xs-8 total-amount-label ">
+                      Total <span class="amount-in-total"> Amount</span>
+                    </label>
+                    <div class="col-xs-4">
+                      <span class="installment-currency">USD</span>
+                      <p id="total-amount" class="form-control-static total-amount">0</p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="form-group" style="margin-top: 25px;text-align: center">
+                <div class="col-xs-12">
+                  <div id="checkout-errors-3" role="alert"></div>
+                  <button id="checkout-button-3" class="btn btn-primary">Pay Now</button>
+                  <a id="pay-later-link" href="https://olympus.greatlearning.in/learner_dashboard" class="pay-later-link hidden">Later</a>
+                </div>
+              </div>
+          </div>
+
+
+          <input id="payment_transaction_program_fee_code" name="payment_transaction[program_fee_code]" type="hidden" value="pgp-aiml-ba-uta-intl-2-online_Cat-A" />
+          <input id="payment_transaction_batch_code" name="payment_transaction[batch_code]" type="hidden" />
+          <input id="payment_transaction_program_id" name="payment_transaction[program_id]" type="hidden" value="679" />
+          <input id="payment_transaction_learning_center_id" name="payment_transaction[learning_center_id]" type="hidden" value="5" />
+          <input id="payment_transaction_product_info" name="payment_transaction[product_info]" type="hidden" value="PGP-AIML-BA-UTA-INTL@online" />
+          <input id="payment_transaction_amount" name="payment_transaction[amount]" type="hidden" />
+          <input id="payment_transaction_installment_options" name="payment_transaction[installment_options]" type="hidden" />
+          <input id="payment_transaction_program_group_id" name="payment_transaction[program_group_id]" type="hidden" value="9000" />
+          <input id="payment_transaction_lms_user_id" name="payment_transaction[lms_user_id]" type="hidden" value="1995201" />
+          <input id="payment_transaction_full_payment_discount_eligible" name="payment_transaction[full_payment_discount_eligible]" type="hidden" />
+
+          <input type="hidden" id="pp" value="true">
+          <input type="hidden" id="currency" value="USD">
+          <input type="hidden" id="is-international" value="true">
+
+          <input type="hidden" id="is_gst_live" value="false">
+          <input type="hidden" id="collect_integrated_tax" value="false">
+          <input type="hidden" id="internal-error" value="">
+          <input type="hidden" id="verify-email" value="">
+          <input type="hidden" id="from-lms" value="true">
+          <input type="hidden" id="payment_due_or_pending" value="true">
+          <input type="hidden" id="payment_due_date_crossed" value="false">
+          <input type="hidden" id="payment_amount_due" value="1000.0">
+          <input type="hidden" id="payment_due_date" value="2021-10-16">
+          <input type="hidden" id="pending_installment_names" value="3rd Installment">
+</form>      </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+
+  </section>
+
+  <span class="js-info" style="display:none" data-source="unspecified" data-location="international"></span>
+
+    <footer class="page-footer ">
+
+  <!-- Copyright -->
+  <div class="footer-copyright">
+    <div class="mx-auto-sm">© 2021 All rights reserved</div>
+    <div class="footer-links text-right hidden-xs">
+      <span><a href="https://olympus.greatlearning.in/privacy-policy">Privacy</a></span>
+      <span><a href="https://olympus.greatlearning.in/terms">Terms of service</a></span>
+      <span>
+        <a href="https://olympus1.greatlearning.in/program_support?pb_id=9000" class="right-last-child">Help</a>
+      </span>
+    </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+</div>
+
+
+</body>
+</html>
